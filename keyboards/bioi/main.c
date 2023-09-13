@@ -34,7 +34,6 @@
 #include "keyboard.h"
 #include "matrix.h"
 #include "debounce.h"
-#include "keymap.h"
 #include "magic.h"
 #include "led.h"
 #include "keycode.h"
@@ -587,7 +586,7 @@ void low_power_keyboard_task(void) {
         }
     }
 
-    action_exec(TICK_EVENT);
+    action_exec(MAKE_TICK_EVENT);
 MATRIX_LOOP_END:;
 }
 
